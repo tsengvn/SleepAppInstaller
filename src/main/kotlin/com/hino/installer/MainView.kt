@@ -6,10 +6,11 @@ import javafx.scene.control.TextArea
 import javafx.scene.layout.VBox
 import javafx.stage.FileChooser
 import javafx.scene.control.TextField
-import tornadofx.View
-import tornadofx.chooseFile
+import tornadofx.*
 import java.io.File
 import java.lang.Exception
+import java.net.URI
+import java.util.regex.Pattern
 import javax.annotation.processing.FilerException
 
 class MainView : View() {
@@ -30,17 +31,14 @@ class MainView : View() {
 
     init {
         soundPathButton.setOnMouseClicked {
-            val files = chooseFile(
-                    title = "Select Sound folder",
-                    filters = arrayOf(FileChooser.ExtensionFilter("All Files", "*.*"))
-            )
-            if (!files.isEmpty()) {
-                soundPathInput.text = files[0].absolutePath.toString()
-            }
 
+            val folder = chooseDirectory( title = "Select Sound folder")
+            if (folder != null && folder.isDirectory) {
+                soundPathInput.text = folder.absolutePath.toString()
+            }
         }
 
-        adbPathInput.text = getDefaultADBFolder()
+        adbPathInput.text = getDefaultADBFolder()/* "/Users/hienngo/IdeaProjects/SleepAppInstaller/bin/mac/adb"*/
         adbPathButton.setOnMouseClicked {
             val files = chooseFile(
                     title = "Select ADB file",
@@ -67,7 +65,7 @@ class MainView : View() {
             writeLog("Checking...")
 
             val apkPath = getAPKPath()
-            if (apkPath == null || !apkPath.endsWith(".apk")) {
+            if (apkPath == null || !apkPath.endsWith(".apk") || !File(apkPath).exists()) {
                 writeLog("APK file is invalid")
             } else {
                 writeLog("APK found...")
@@ -84,21 +82,40 @@ class MainView : View() {
         }
     }
 
+    fun String.replaceAll(regex: String, replacement: String): String {
+        return Pattern.compile(regex).matcher(this).replaceAll(replacement)
+    }
+
     private fun startProcess(apkPath: String) {
+        val outputURI = URI("file:///" + apkPath.replaceAll(" ", "%20"))
+        val outputFile = File(outputURI)
         logText.text = ""
-        execADBCommand("devices")
-        execADBCommand("shell dpm remove-active-admin com.sleepinfuser.launcher/com.sleepinfuser.mainapp.SleepDeviceAdminReceiver")
-        execADBCommand("push \"$apkPath\" \"/data/local/tmp/com.sleepinfuser.launcher\"")
-        execADBCommand("shell pm install -t -r \"/data/local/tmp/com.sleepinfuser.launcher\"")
-        execADBCommand("shell dpm set-device-owner com.sleepinfuser.launcher/com.sleepinfuser.mainapp.SleepDeviceAdminReceiver")
+        execADBCommand("devices") {
+            execADBCommand("shell dpm remove-active-admin com.sleepinfuser.launcher/com.sleepinfuser.mainapp.SleepDeviceAdminReceiver") {
+                writeLog("removed old app")
+                execADBCommand("push ${outputFile.absolutePath} /data/local/tmp/com.sleepinfuser.launcher") {
+                    writeLog("installing...")
+                    execADBCommand("shell pm install -t -r /data/local/tmp/com.sleepinfuser.launcher") {
+                        writeLog("set device admin...")
+                        execADBCommand("shell dpm set-device-owner com.sleepinfuser.launcher/com.sleepinfuser.mainapp.SleepDeviceAdminReceiver") {
+                            if (isSoundFolderFound()) {
+                                writeLog("Sounds folder found, start to copy sound files")
 
-        if (isSoundFolderFound()) {
-            writeLog("Sounds folder found, start to copy sound files")
+                                execADBCommand("shell rm -rf \"/sdcard/Sounds\"") {
+                                    execADBCommand("push \"$soundPathInput\" \"/sdcard/\"") {
+                                        writeLog("Done")
+                                    }
+                                }
+                            } else {
+                                writeLog("Sound folder not found or invalid, skip")
+                                writeLog("Done")
+                            }
 
-            execADBCommand("shell rm -rf \"/sdcard/Sounds\"")
-            execADBCommand("push \"$soundPathInput\" \"/sdcard/\"")
-        } else {
-            writeLog("Sound folder not found or invalid")
+                        }
+                    }
+                }
+            }
+
         }
     }
 
@@ -130,7 +147,7 @@ class MainView : View() {
     }
 
 
-    private fun execADBCommand(cmd: String) {
+    private fun execADBCommand(cmd: String, block : () -> Unit = {}) {
         runAsync {
             try {
                 execCommand("${adbPathInput.text} $cmd")
@@ -139,6 +156,7 @@ class MainView : View() {
             }
         } ui {
             writeLog(it)
+            block()
         }
 
     }

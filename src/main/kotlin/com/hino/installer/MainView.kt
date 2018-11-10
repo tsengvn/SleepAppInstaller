@@ -26,6 +26,8 @@ class MainView : View() {
     val installButton : Button by fxid("btn_install")
     val logText : TextArea by fxid("input_log")
 
+    private val separator = System.getProperty("file.separator")
+
     init {
         soundPathButton.setOnMouseClicked {
             val files = chooseFile(
@@ -101,7 +103,7 @@ class MainView : View() {
     }
 
     private fun getCurrentFolder() : String {
-        return File(MainView::class.java.protectionDomain.codeSource.location.toURI()).path
+        return File(MainView::class.java.protectionDomain.codeSource.location.toURI()).parent
     }
 
     private fun getAPKPath() : String? {
@@ -111,9 +113,9 @@ class MainView : View() {
     private fun getDefaultADBFolder() : String {
         val os = System.getProperty("os.name").toLowerCase()
         if (os.contains("mac")) {
-            return "${getCurrentFolder()}/mac/adb"
+            return "${getCurrentFolder()}${separator}mac${separator}adb"
         } else {
-            return "${getCurrentFolder()}/win/adb.exe"
+            return "${getCurrentFolder()}${separator}win${separator}adb.exe"
         }
     }
 

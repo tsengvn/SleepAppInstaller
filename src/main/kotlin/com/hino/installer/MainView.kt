@@ -38,7 +38,7 @@ class MainView : View() {
             }
         }
 
-        adbPathInput.text = getDefaultADBFolder()/* "/Users/hienngo/IdeaProjects/SleepAppInstaller/bin/mac/adb"*/
+        adbPathInput.text =/* getDefaultADBFolder()*/ "/Users/hienngo/IdeaProjects/SleepAppInstaller/bin/mac/adb"
         adbPathButton.setOnMouseClicked {
             val files = chooseFile(
                     title = "Select ADB file",
@@ -93,16 +93,21 @@ class MainView : View() {
         execADBCommand("devices") {
             execADBCommand("shell dpm remove-active-admin com.sleepinfuser.launcher/com.sleepinfuser.mainapp.SleepDeviceAdminReceiver") {
                 writeLog("removed old app")
+
                 execADBCommand("push ${outputFile.absolutePath} /data/local/tmp/com.sleepinfuser.launcher") {
                     writeLog("installing...")
+
                     execADBCommand("shell pm install -t -r /data/local/tmp/com.sleepinfuser.launcher") {
                         writeLog("set device admin...")
+
                         execADBCommand("shell dpm set-device-owner com.sleepinfuser.launcher/com.sleepinfuser.mainapp.SleepDeviceAdminReceiver") {
                             if (isSoundFolderFound()) {
                                 writeLog("Sounds folder found, start to copy sound files")
 
-                                execADBCommand("shell rm -rf \"/sdcard/Sounds\"") {
-                                    execADBCommand("push \"$soundPathInput\" \"/sdcard/\"") {
+                                execADBCommand("shell rm -rf /sdcard/Sounds") {
+                                    writeLog("removed old Sounds, copying new sounds...")
+
+                                    execADBCommand("push ${soundPathInput.text} /sdcard/") {
                                         writeLog("Done")
                                     }
                                 }

@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fd9efa3-eaf7-4819-a341-fa92bf671f2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.8/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/kotlin/main/com/hino/installer/MainView.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/kotlin/main/com/hino/installer/MainView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/build-history.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/inputs/source-to-output.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/internal-name-to-source.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/subtypes.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/jvm/kotlin/supertypes.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/counters.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/counters.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/file-to-id.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/id-to-file.tab_i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/caches-jvm/lookups/lookups.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/kotlin/compileKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/kotlin/compileKotlin/last-build.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/hino/installer/MainView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/hino/installer/MainView.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -102,6 +69,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="2" />
+          <entry key="gitignore" value="5" />
           <entry key="gradle" value="52" />
           <entry key="kt" value="1211" />
         </counts>
@@ -110,6 +78,7 @@
         <counts>
           <entry key="Groovy" value="52" />
           <entry key="Kotlin" value="1211" />
+          <entry key="PLAIN_TEXT" value="5" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -172,11 +141,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/hino/installer/MainView.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+              <caret line="132" column="63" lean-forward="true" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -190,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
+            <state relative-caret-position="45">
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -688,9 +657,9 @@
         <option value="$PROJECT_DIR$/src/main/kotlin/com/hino/installer/HelloWorld.kt" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/hino/installer/SleepInstallerApp.kt" />
         <option value="$PROJECT_DIR$/src/main/resources/com/hino/installer/MainView.fxml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/kotlin/com/hino/installer/MainView.kt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -732,7 +701,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542032991650" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542033109787" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -792,7 +761,7 @@
     <frame x="40" y="23" width="1400" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49946523" visible="true" weight="0.23195876" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49946523" visible="true" weight="0.23195876" />
       <window_info id="Structure" order="1" sideWeight="0.5005348" side_tool="true" weight="0.22278163" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -801,13 +770,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32866243" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32866243" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.27515924" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27515924" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.3299363" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32941177" />
@@ -861,13 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="7" selection-start-line="1" selection-start-column="7" selection-end-line="1" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -897,7 +859,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/hino/installer/MainView.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="132" column="37" selection-start-line="132" selection-start-column="37" selection-end-line="132" selection-end-column="37" />
+          <caret line="132" column="63" lean-forward="true" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
         </state>
       </provider>
     </entry>

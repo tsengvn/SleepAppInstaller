@@ -10,6 +10,8 @@ import tornadofx.*
 import java.io.File
 import java.lang.Exception
 import java.net.URI
+import java.nio.file.Path
+import java.nio.file.Paths
 import java.util.regex.Pattern
 import javax.annotation.processing.FilerException
 
@@ -87,40 +89,49 @@ class MainView : View() {
     }
 
     private fun startProcess(apkPath: String) {
-        val outputURI = URI("file:///" + apkPath.replaceAll(" ", "%20"))
-        val outputFile = File(outputURI)
+        val outputFile = Paths.get(apkPath)
         logText.text = ""
         execADBCommand("devices") {
             execADBCommand("shell dpm remove-active-admin com.sleepinfuser.launcher/com.sleepinfuser.mainapp.SleepDeviceAdminReceiver") {
                 writeLog("removed old app")
 
-                execADBCommand("push ${outputFile.absolutePath} /data/local/tmp/com.sleepinfuser.launcher") {
+                execADBCommand("push ${outputFile.toAbsolutePath()} /data/local/tmp/com.sleepinfuser.launcher") {
                     writeLog("installing...")
 
                     execADBCommand("shell pm install -t -r /data/local/tmp/com.sleepinfuser.launcher") {
                         writeLog("set device admin...")
 
                         execADBCommand("shell dpm set-device-owner com.sleepinfuser.launcher/com.sleepinfuser.mainapp.SleepDeviceAdminReceiver") {
-                            if (isSoundFolderFound()) {
-                                writeLog("Sounds folder found, start to copy sound files")
-
-                                execADBCommand("shell rm -rf /sdcard/Sounds") {
-                                    writeLog("removed old Sounds, copying new sounds...")
-
-                                    execADBCommand("push ${soundPathInput.text} /sdcard/") {
-                                        writeLog("Done")
-                                    }
-                                }
-                            } else {
-                                writeLog("Sound folder not found or invalid, skip")
-                                writeLog("Done")
-                            }
-
+                            pushSoundFiles()
                         }
                     }
                 }
             }
 
+        }
+    }
+
+    private fun pushSoundFiles() {
+        if (isSoundFolderFound()) {
+            writeLog("Sounds folder found, start to copy sound files")
+
+            execADBCommand("shell rm -rf /sdcard/Sounds") {
+                writeLog("removed old Sounds, copying new sounds...")
+
+                val folder = Paths.get(soundPathInput.text)
+                execADBCommand("push ${folder.toAbsolutePath()} /sdcard/") {
+                    relauch()
+                }
+            }
+        } else {
+            writeLog("Sound folder not found or invalid, skip")
+            relauch()
+        }
+    }
+
+    private fun relauch() {
+        execADBCommand("shell am kill com.sleepinfuser.launcher && shell am start -n \"com.sleepinfuser.launcher/com.sleepinfuser.mainapp.ui.HomeActivity\" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER") {
+            writeLog("Done")
         }
     }
 
